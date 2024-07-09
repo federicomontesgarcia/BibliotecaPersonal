@@ -1,0 +1,41 @@
+{% extends "BibliotecaWebApp/base.html" %}
+
+{%load static %}
+
+{% block content %}
+
+<div class="container">
+ <div class="row">
+
+{% for autor in autores %}
+
+  <div class="col-md-3">
+
+  <div class="card" style="text-align: center; background-color: #f2f2f2;">
+      <style>
+            .card-img-top {
+                width: 200px; /* Tamaño deseado */
+                height: 200px; /* Tamaño deseado */
+                object-fit: cover; /* Para mantener la proporción de la imagen */
+                display: block; /* Para permitir el uso de márgenes automáticos */
+                margin: auto; /* Para centrar la imagen horizontalmente */
+            }
+      </style>
+
+      <img src="{{autor.imagen.url}}" class="card-img-top">
+      <div class="card-body" style="text-align: center;">
+
+          <h4 class="card-title"><strong>{{autor.nombre}} {{autor.apellido}}</strong></h4>
+          <p class="card-text">{{autor.origen}}&nbsp;</p>
+          <p class="card-text">{{autor.nacimiento}}&nbsp;</p>
+
+      </div>
+
+  </div>
+  </div>
+
+  {% endfor %}
+ </div>
+</div>
+{% endblock %}
+
