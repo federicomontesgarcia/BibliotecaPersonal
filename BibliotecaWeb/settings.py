@@ -149,11 +149,3 @@ os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-#configuracion de correo electrónico
-EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST='smtp-mail.outlook.com'
-EMAIL_USE_TLS=True 
-EMAIL_PORT=587 
-EMAIL_HOST_USER="baudolino78@hotmail.com"
-EMAIL_HOST_PASSWORD="fede0901"
