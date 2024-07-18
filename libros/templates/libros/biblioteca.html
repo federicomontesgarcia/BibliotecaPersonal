@@ -1,0 +1,29 @@
+{% extends "BibliotecaWebApp/base.html" %}
+
+{%load static %}
+
+{% block content %}
+
+<div class="container">
+ <div class="row">
+
+{% for libro in libros %}
+
+  <div class="col-md-3">
+
+  <div class="card" style="width:80%; margin: 5px 5px;">
+
+          <h7 class="card-title">{{libro.nombre}}</h7>
+          <h7 class="card-title">{{libro.precio}}</h7>
+          <h7 class="card-title">{{libro.editorial}}</h7>
+          <p class="card-text">Publicación: {{libro.fecha}}</p>
+
+      
+
+  </div>
+  </div>
+
+  {% endfor %}
+ </div>
+</div>
+{% endblock %}

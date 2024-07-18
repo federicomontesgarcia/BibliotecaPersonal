@@ -12,11 +12,13 @@ from rest_framework.decorators import api_view, permission_classes
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 from decimal import Decimal
+from django.shortcuts import render
+from libros.models import Libro
 
 # Create your views here.
 
 def __get_libros():
-    url = 'http://localhost:8000/libros/'
+    url = 'http://localhost:8000/libros/v1'
     response = requests.get(url)
     
     if response.status_code == 200:
@@ -132,6 +134,14 @@ def save_book(request):
 
 
 #--- Listado de libros en la vista ---
+
+def biblioteca(request):
+    """Función para mostrar la información de los libros"""
+
+    libros = Libro.objects.all()
+
+    return render(request, "libros/biblioteca.html", {"libros": libros})
+
 
 #-------------
 class LibroViews(APIView):

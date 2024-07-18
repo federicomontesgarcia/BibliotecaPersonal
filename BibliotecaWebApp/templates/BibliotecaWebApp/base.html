@@ -23,7 +23,7 @@
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       
-        <span class="site-heading-lower">Biblioteca</span>
+        <span class="site-heading-lower">Biblioteca Personal</span>
       </h1>
 
 
@@ -42,8 +42,8 @@
           <li class="nav-item {% if request.path == '/autores/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Autores'%}">Autores</a>
           </li>
-          <li class="nav-item {% if request.path == '/tienda/' %}active{% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda'%}">Mis Libros</a>
+          <li class="nav-item {% if request.path == '/libros/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Biblioteca'%}">Mis Libros</a>
           </li>
           <li class="nav-item {% if request.path == '/libros/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Libros'%}">Libros Tienda</a>

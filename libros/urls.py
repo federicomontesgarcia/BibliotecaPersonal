@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.libros, name="Libros"),
     path('', views.LibroViews.as_view(), name="libro"),
     path('save-book', views.save_book, name="grabarLibro"),
+    path('biblioteca', views.biblioteca, name="Biblioteca"),
 
 
     path('libro/<int:id>/', views.LibroViews.as_view()),
